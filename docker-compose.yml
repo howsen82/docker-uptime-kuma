@@ -17,5 +17,5 @@ services:
     network_mode: bridge
     privileged: false
     environment:
-      - ADMIN_PASSWORD=pass2023
-      - ADMIN_EMAIL=howsenpl@hotmail.com
+      - ADMIN_PASSWORD=<password here>
+      - ADMIN_EMAIL=<email here>
