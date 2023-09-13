@@ -4,6 +4,9 @@ services:
   uptime-kuma:
     container_name: uptime-kuma
     image: louislam/uptime-kuma:latest
+    environment:
+      - ADMIN_PASSWORD=
+      - ADMIN_EMAIL=
     cpu_shares: 90
     deploy:
       resources:
@@ -16,6 +19,3 @@ services:
       - ./data:/app/data
     network_mode: bridge
     privileged: false
-    environment:
-      - ADMIN_PASSWORD=<password here>
-      - ADMIN_EMAIL=<email here>
