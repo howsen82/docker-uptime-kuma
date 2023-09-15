@@ -1,0 +1,15 @@
+version: '3.9'
+
+services:
+  uptimekuma:
+    container_name: uptimekuma
+    image: louislam/uptime-kuma:latest
+    ports:
+      - 3001:3001
+    volumes:
+      - uptimekuma-data:/app/data
+    restart: unless-stopped
+
+volumes:
+  uptimekuma-data:
+    driver: local
